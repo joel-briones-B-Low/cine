@@ -28,7 +28,6 @@ def runMenu():
                                 print('adios')
                                 continuar = False
                         else: continuar = False # cierra el ciclo
-                runMenu() # creo se llava recursividad o reciprocidad, algo asi
         except Exception as e:
                 runMenu()
                 
