@@ -5,19 +5,23 @@ class Persona():
         self.metodo = metodo
     
     def crearPersona(self) -> bool:
-        self.nombre = input('Ingresa tu nombre: ')
-        self.boletos = int(input('ingresa la cantidad de boletos: '))
-        self.metodo = int(input('si el metodo es CINECO solo oprimir el 1\n de lo contario oprimir otro caracter: '))
-        if self.metodo == 1:
-            self.metodo = 'CINECO'
-        else:
-            self.metodo = 'OTRO'
+        try:
+            self.nombre = input('Ingresa tu nombre: ')
+            self.boletos = int(input('ingresa la cantidad de boletos: '))
+            self.metodo = int(input('si el metodo de pago es CINECO solo oprimir el 1\n de lo contario oprimir otro caracter: '))
+            if self.metodo == 1:
+                self.metodo = 'CINECO'
+            else:
+                self.metodo = 'OTRO'
+                
+            if self.boletos <= 0 or self.boletos > 7:
+                print('La cantidad de boletos debe ser mayor a 0 y menor o igual a 7')
+                return False
             
-        if self.boletos <= 0 or self.boletos > 7:
-            print('La cantidad de boletos debe ser mayor a 0 y menor o igual a 7')
+            return True
+        except Exception as e:
+            print(f'Error: {e}')
             return False
-        
-        return True
     
     def reiniciarBoletos(self, persona):
         persona.boletos = int(input('ingresa la nueva cantidad de boletos: '))

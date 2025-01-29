@@ -13,18 +13,23 @@ def opcionCap():
 
 def runMenu():
         # Simulación de uso
-        os.system('cls')
-        continuar = True
-        while continuar:
-                opcion = opcionCap()
-                if opcion == 1:
-                        grupo = GrupoPersona()
-                        grupo.crearGrupo()
-                        ticket = Ticket()
-                        ticket.imprimirTicket(grupo.personas)
-                        ticket.imprimirTicket([])
-                else:
-                        print('adios')
-                        continuar = False
-
+        try:
+                os.system('cls')
+                continuar = True
+                while continuar:
+                        opcion = opcionCap()
+                        if opcion == 1:
+                                grupo = GrupoPersona()
+                                grupo.crearGrupo()
+                                ticket = Ticket()
+                                ticket.imprimirTicket(grupo.personas)
+                                ticket.imprimirTicket([])
+                        elif opcion == 2:
+                                print('adios')
+                                continuar = False
+                        else: continuar = False # cierra el ciclo
+                runMenu() # creo se llava recursividad o reciprocidad, algo asi
+        except Exception as e:
+                runMenu()
+                
 

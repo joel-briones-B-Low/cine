@@ -8,6 +8,7 @@ def crearArchivo(personas):
         actual = os.getcwd()
         ruta = Path(actual)
         archivo = open('cineTicket.txt', 'w')
+        archivo.write('-'* 34 + '\n')
         archivo.write('|Persona   |Boletos   |Total     |\n')        
         archivo.write('-'* 34 + '\n')
         for persona in personas:
