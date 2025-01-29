@@ -1,4 +1,5 @@
 from cinepolis.model.Persona import Persona
+import os
 
 class GrupoPersona:
     def __init__(self):
@@ -6,9 +7,12 @@ class GrupoPersona:
 
     def crearGrupo(self):
         i = 0
+        os.system('cls')
         cantidad = int(input('Ingresa la cantidad de personas: '))
         for _ in range(cantidad):
             i = i + 1
+            os.system('cls')
+            print(f'persona numero : {i}')
             persona = Persona()
             comprobar = persona.crearPersona()
             if comprobar:

@@ -20,11 +20,13 @@ def total(boletos, costoBoleto, tipoPago) -> float:
     if tipoPago == 'CINECO':
         adicional = 0.10
         if boletos > 5:
-            return round(boletosLocal - ((boletosLocal * descuento_masCinco())* adicional), 3)
+            local = round(boletosLocal - (boletosLocal * descuento_masCinco()), 3)
+            return round(local - (local) *adicional,3)
         elif boletos == 3 or boletos == 4 or boletos == 5:
-            return round(boletosLocal - ((boletosLocal * descuento_masCinco())* adicional), 3)
+            local =  round(boletosLocal - (boletosLocal * descuento_masCinco()), 3)
+            return round(local - (local) * adicional, 3)
         else :
-            return round(boletosLocal - ((boletosLocal) * adicional), 3)
+            local =  round(boletosLocal - ((boletosLocal) * adicional), 3)
     else:
         if boletos > 5:
             return round(boletosLocal - (boletosLocal * descuento_masCinco()), 3)

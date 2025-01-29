@@ -1,6 +1,5 @@
 from cinepolis.model.GrupoPersona import GrupoPersona
 import os
-from cinepolis.func.costos import costo
 from cinepolis.model.Ticket import Ticket
 
 def opcionCap():
@@ -16,6 +15,7 @@ def opcionCap():
 
 def runMenu():
         # Simulación de uso
+        os.system('cls')
         continuar = True
         while continuar:
                 opcion = opcionCap()
