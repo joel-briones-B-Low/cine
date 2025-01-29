@@ -1,5 +1,5 @@
-from cinepolis.func.costos import total
-from cinepolis.func.crearArchivo import crearArchivo
+from func.costos import total
+from func.crearArchivo import crearArchivo
 import os
 
 class Ticket:
@@ -26,7 +26,6 @@ class Ticket:
                                 os.system('cls')
                                 self.TicketPersona(personas=personas)
                         else:
-                                os.system('cls')
                                 print('' * 5)
                                 print('Ticket Final')
                                 print(f'|Boletos{" " * 3}|Costo{" " * 5}|Total{" " * 5}|')

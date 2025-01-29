@@ -1,6 +1,6 @@
-from cinepolis.model.GrupoPersona import GrupoPersona
+from model.GrupoPersona import GrupoPersona
 import os
-from cinepolis.model.Ticket import Ticket
+from model.Ticket import Ticket
 
 def opcionCap():
         opciones = """
@@ -10,8 +10,6 @@ def opcionCap():
         print(opciones)
         opcion = int(input('Ingresa la opcion deseada: '))
         return opcion
-
-
 
 def runMenu():
         # Simulación de uso

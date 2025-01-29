@@ -1,4 +1,4 @@
-from cinepolis.model.Persona import Persona
+from model.Persona import Persona
 import os
 
 class GrupoPersona:
@@ -15,7 +15,7 @@ class GrupoPersona:
             print(f'persona numero : {i}')
             persona = Persona()
             comprobar = persona.crearPersona()
-            if comprobar:
+            if comprobar is True:
                 self.personas.append(persona)
             else:
                 opcionLista = """
@@ -25,7 +25,9 @@ class GrupoPersona:
                 print(opcionLista)
                 opcion = int(input('Ingresa la opcion deseada: '))                
                 if opcion == 1:
+                    self.personas = []
                     self.crearGrupo()
+                    break
                 elif opcion == 2:
                     persona = persona.reiniciarBoletos(persona)
                     self.personas.append(persona)             

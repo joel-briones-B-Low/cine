@@ -1,6 +1,8 @@
 from pathlib import Path
-from cinepolis.func.costos import total
+from func.costos import total
 import os
+
+
 def crearArchivo(personas):
     if personas:
         actual = os.getcwd()
